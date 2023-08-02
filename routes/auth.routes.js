@@ -37,6 +37,7 @@ router.post('/login', async (req, res) => {
         algorithm: 'HS256',
         expiresIn: '6h',
       })
+      // Sending back the token to the front
       res.status(202).json({ token: authToken })
     } else {
       /* Incorrect password */
